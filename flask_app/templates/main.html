@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>main page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <!--1/3-->
+        </div>
+        
+        <div class="col mt-5">
+          <!--Header-->
+          <div class="d-flex justify-content-center">
+            <h2>오늘의 보드게임</h2>
+          </div>
+
+          <form action = "http://127.0.0.1:5000/main" method = "post">
+            <!--게임 장르-->
+            <div class="input-group mt-5">
+              <label class="input-group-text" for="inputGroupSelect01">게임 장르</label>
+              <select class="form-select" name="category" id="inputGroupSelect01">
+                <option selected>장르 선택</option>
+                <option value="Card Game">Card Game</option>
+                <option value="Economic">Economic</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Fighting">Fighting</option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Deduction">Deduction</option>
+                <option value="Dice">Dice</option>
+                <option value="Medieval">Medieval</option>
+                <option value="Abstract Strategy">Abstract Strategy</option>
+                <option value="City Building">City Building</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Ancient">Ancient</option>
+                <option value="Animals">Animals</option>
+                <option value="Humor">Humor</option>
+                <option value="Territory Building">Territory Building</option>
+                <option value="Renaissance">Renaissance</option>
+                <option value="Exploration">Exploration</option>
+                <option value="Bluffing">Bluffing</option>
+                <option value="Party Game">Party Game</option>
+                <option value="Nautical">Nautical</option>
+                <option value="Miniatures">Miniatures</option>
+                <option value="Wargame">Wargame</option>
+                <option value="Civilization">Civilization</option>
+                <option value="Negotiation">Negotiation</option>
+                <option value="Transportation">Transportation</option>
+              </select>
+            </div>
+
+            <!--게임 난이도-->
+            <div class="input-group mt-5">
+              <label class="input-group-text" for="inputGroupSelect01">게임 난이도</label>
+              <select class="form-select" name="averageweight" id="inputGroupSelect01">
+                <option selected>난이도 선택</option>
+                <option value="1">매우 쉬움</option>
+                <option value="2">쉬움</option>
+                <option value="3">보통</option>
+                <option value="4">어려움</option>
+                <option value="5">매우 어려움</option>
+              </select>
+            </div>
+
+            <!--게임 시간-->
+            <div class="input-group mt-5">
+              <span class="input-group-text">게임 시간(분)</span>
+              <input type="number" name = "minplaytime" aria-label="minplaytime" class="form-control" placeholder="0">
+              <input type="number" name = "maxplaytime" aria-label="maxplaytime" class="form-control" placeholder="~180">
+            </div>
+
+            <!--게임 인원-->
+            <div class="input-group mt-5">
+              <span class="input-group-text">게임 인원</span>
+              <input type="number" name = "minplayers" aria-label="minplayers" class="form-control" placeholder="1">
+              <input type="number" name = "maxplayers" aria-label="maxplayers" class="form-control" placeholder="~12">
+            </div>
+
+            <!--출시년도-->
+            <div class="input-group mt-5">
+              <span class="input-group-text" id="inputGroup-sizing-default">출시 년도</span>
+              <input type="number" name="yearpublished" class="form-control" placeholder="ex) 2000" aria-label="yearpublished" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <!--게임연령-->
+            <div class="input-group mt-5">
+              <span class="input-group-text" id="inputGroup-sizing-default">게임 연령</span>
+              <input type="number" name="minage" class="form-control" placeholder="ex) 10" aria-label="minage" aria-describedby="inputGroup-sizing-default">
+            </div>
+            
+            <!--버튼-->
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-outline-secondary mt-5">Submit</button>
+            </div>
+          </form>
+        </div>
+                
+        <div class="col">
+          <!--3/3-->
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
