@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request
 import sys
-sys.path.insert(0,'/Users/kyoh/Downloads/Section3/project3/flask_app/routes')
-import main_routes
+# sys.path.insert(0,'/Users/kyoh/Downloads/Section3/project3/flask_app/routes')
+from flask_app.routes import main_routes
 
 bp = Blueprint('result', __name__, url_prefix='/result')
 

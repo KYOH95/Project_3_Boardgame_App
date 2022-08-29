@@ -1,12 +1,14 @@
 import psycopg2
 import pandas as pd
+import database_info
 
 #connect to postgresql cloud database
 conn = psycopg2.connect(
-    host="tiny.db.elephantsql.com",
-    database="wvhwwxaj",
-    user="wvhwwxaj",
-    password="nuuVmVsPvLq8QxO4UJL7erelfFgLDoEe")
+    host=database_info.host,
+    port=database_info.port,
+    database=database_info.database,
+    user=database_info.user,
+    password=database_info.password)
 
 #connect cursor
 cur = conn.cursor()
@@ -36,7 +38,7 @@ cur.execute("""CREATE TABLE BoardGameGeek(
 			""")
 
 #read csv file from local computer
-df = pd.read_csv('/Users/kyoh/Downloads/Section3/project3/board_games_info.csv')
+df = pd.read_csv('/Users/kyoh/Downloads/Section3/project3/Project_3_Boardgame_App/board_games_info.csv')
 
 #make meaningful dataframe with valualble columns from the whole dataset
 df = df[["id","thumbnail","image","primary","description","yearpublished","minplayers","maxplayers","playingtime","minplaytime",
@@ -44,6 +46,9 @@ df = df[["id","thumbnail","image","primary","description","yearpublished","minpl
 
 #only need 0-1000 most reviewed(famous) games
 df = df[0:1000]
+
+#save new csv file
+# df.to_csv("board_game_1000.csv", mode='w')
 
 df_list_tuple = list(df.itertuples(index=False, name=None))
 sql = """INSERT INTO BoardGameGeek (id, thumbnail, image, game, description, yearpublished, minplayers, maxplayers, playingtime, 

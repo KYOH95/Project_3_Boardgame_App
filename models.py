@@ -6,14 +6,15 @@ import numpy as np
 import warnings
 import random
 import pickle
-import postgresql_info
+import database_info
 pd.options.display.float_format = '{:.3f}'.format
 
 conn = psycopg2.connect(
-    host=postgresql_info.host,
-    database=postgresql_info.database,
-    user=postgresql_info.user,
-    password=postgresql_info.password)
+    host=database_info.host,
+    port=database_info.port,
+    database=database_info.database,
+    user=database_info.user,
+    password=database_info.password)
 
 cur = conn.cursor()
 

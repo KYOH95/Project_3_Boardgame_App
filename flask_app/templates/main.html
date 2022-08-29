@@ -20,7 +20,7 @@
         <div class="col mt-5">
           <!--Header-->
           <div class="d-flex justify-content-center">
-            <h2>오늘의 보드게임</h2>
+            <h2>보드게임 추천 서비스</h2>
           </div>
 
           <form action = "http://127.0.0.1:5000/main" method = "post">
@@ -73,27 +73,27 @@
             <!--게임 시간-->
             <div class="input-group mt-5">
               <span class="input-group-text">게임 시간(분)</span>
-              <input type="number" name = "minplaytime" aria-label="minplaytime" class="form-control" placeholder="0">
-              <input type="number" name = "maxplaytime" aria-label="maxplaytime" class="form-control" placeholder="~180">
+              <input type="number" name = "minplaytime" aria-label="minplaytime" class="form-control" placeholder="최소 시간 입력">
+              <input type="number" name = "maxplaytime" aria-label="maxplaytime" class="form-control" placeholder="최대 시간 입력">
             </div>
 
             <!--게임 인원-->
             <div class="input-group mt-5">
               <span class="input-group-text">게임 인원</span>
-              <input type="number" name = "minplayers" aria-label="minplayers" class="form-control" placeholder="1">
-              <input type="number" name = "maxplayers" aria-label="maxplayers" class="form-control" placeholder="~12">
+              <input type="number" name = "minplayers" aria-label="minplayers" class="form-control" placeholder="최소 인원 입력">
+              <input type="number" name = "maxplayers" aria-label="maxplayers" class="form-control" placeholder="최대 인원 입력">
             </div>
 
             <!--출시년도-->
             <div class="input-group mt-5">
               <span class="input-group-text" id="inputGroup-sizing-default">출시 년도</span>
-              <input type="number" name="yearpublished" class="form-control" placeholder="ex) 2000" aria-label="yearpublished" aria-describedby="inputGroup-sizing-default">
+              <input type="number" name="yearpublished" class="form-control" placeholder="출시 년도 입력" aria-label="yearpublished" aria-describedby="inputGroup-sizing-default">
             </div>
 
             <!--게임연령-->
             <div class="input-group mt-5">
               <span class="input-group-text" id="inputGroup-sizing-default">게임 연령</span>
-              <input type="number" name="minage" class="form-control" placeholder="ex) 10" aria-label="minage" aria-describedby="inputGroup-sizing-default">
+              <input type="number" name="minage" class="form-control" placeholder="만 나이 입력" aria-label="minage" aria-describedby="inputGroup-sizing-default">
             </div>
             
             <!--버튼-->
