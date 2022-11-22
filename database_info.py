@@ -3,7 +3,7 @@
 # port="9718"
 # database="boardgame"
 # user="postgres"
-# password="Krudxor95!!"
+# password=""
 
 
 #cloud elephantsql database
